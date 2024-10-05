@@ -1,4 +1,6 @@
 // config/db.js
+//connects to MongoDB Atlas instance using 
+//connection string we copied from Atlas
 const mongoose = require('mongoose');
 
 const connectDB = async () => {

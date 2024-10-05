@@ -1,4 +1,7 @@
 // models/User.js
+//defines the schema for users 
+//includes usernmae email and password (hashed using
+//bcrypt)
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 
