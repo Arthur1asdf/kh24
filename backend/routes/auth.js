@@ -1,28 +1,29 @@
-// routes/auth.js
-//creates routes for sign up and log in
-
 const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const User = require('../models/User');
+
+// Placeholder for user storage (e.g., in-memory, file-based, etc.)
+let users = [];
 
 // Signup
 router.post('/signup', async (req, res) => {
-  const { username, email, password } = req.body;
+  const { firstName, lastName, username, email, password } = req.body;
 
   try {
-    let user = await User.findOne({ email });
+    // Check if the user already exists in the placeholder storage
+    let user = users.find((u) => u.email === email);
     if (user) return res.status(400).json({ msg: 'User already exists' });
 
     // Hash the password before saving
     const salt = await bcrypt.genSalt(10);
     const hashedPassword = await bcrypt.hash(password, salt);
 
-    user = new User({ firstName, lastName, email, username, password: hashedPassword });
-    await user.save();
+    // Simulate saving the user in memory (or other storage)
+    user = { firstName, lastName, email, username, password: hashedPassword };
+    users.push(user);
 
-    const payload = { userId: user.id };
+    const payload = { email: user.email };
     const token = jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: '1h' });
 
     res.json({ token });
@@ -37,13 +38,14 @@ router.post('/login', async (req, res) => {
   const { email, password } = req.body;
 
   try {
-    const user = await User.findOne({ email });
+    // Find the user in the placeholder storage
+    const user = users.find((u) => u.email === email);
     if (!user) return res.status(400).json({ msg: 'Invalid credentials' });
 
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) return res.status(400).json({ msg: 'Invalid credentials' });
 
-    const payload = { userId: user.id };
+    const payload = { email: user.email };
     const token = jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: '1h' });
 
     res.json({ token });
