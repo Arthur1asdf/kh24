@@ -3,7 +3,7 @@ const express = require('express');
 const plaid = require('plaid');
 const router = express.Router();
 
-const plaidClient = new plaid.Client({
+const plaidClient = new plaid.PlaidClient({
   clientID: process.env.PLAID_CLIENT_ID,
   secret: process.env.PLAID_SECRET,
   env: plaid.environments.sandbox, // or development/production

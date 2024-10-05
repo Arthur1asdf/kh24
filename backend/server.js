@@ -4,6 +4,7 @@ const express = require('express');
 const connectDB = require('./config/db');
 const authRoutes = require('./routes/auth');
 const plaidRoutes = require('./routes/plaid');
+const cors = require('cors');
 
 const app = express();
 
@@ -11,7 +12,8 @@ const app = express();
 connectDB();
 
 // Middleware
-app.use(express.json());
+app.use(cors()); // Allow CORS for frontend-backend communication
+app.use(express.json()); // Parse JSON requests
 
 // Define routes
 app.use('/api/auth', authRoutes);
