@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Signin.css'; // Assuming you have a CSS file for styling
+import './App.css';
 
 const Signin = () => {
     const [email, setEmail] = useState('');
@@ -8,15 +9,15 @@ const Signin = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
         // Handle sign-in logic here
-        console.log("Email: ", email, "Password: ", password);
+        console.log("Email", email, "Password: ", password);
     };
 
     return (
         <div className="sign-in-container">
-            <h2>Sign In</h2>
+            <h2>Log In</h2>
             <form onSubmit={handleSubmit} className="sign-in-form">
                 <div className="form-group">
-                    <label htmlFor="email">Email:</label>
+                    <label htmlFor="email">Email address:</label>
                     <input
                         type="email"
                         id="email"
