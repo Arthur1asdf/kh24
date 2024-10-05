@@ -1,25 +1,4 @@
-// models/User.js
-//defines the schema for users 
-//includes usernmae email and password (hashed using
-//bcrypt)
-const mongoose = require('mongoose');
-const bcrypt = require('bcryptjs');
+// Placeholder for user schema definition or validation (if needed)
+// As MongoDB is removed, we don't need mongoose or bcrypt here.
 
-const UserSchema = new mongoose.Schema({
-  firstName: { type: String, required: true },
-  lastName: { type: String, required: true },
-  email: { type: String, required: true, unique: true },
-  username: { type: String, required: true, unique: true },
-  password: { type: String, required: true },
-});
-
-UserSchema.pre('save', async function (next) {
-  if (!this.isModified('password')) {
-    return next();
-  }
-  const salt = await bcrypt.genSalt(10);
-  this.password = await bcrypt.hash(this.password, salt);
-  next();
-});
-
-module.exports = mongoose.model('User', UserSchema);
+module.exports = {}; // This can be adjusted based on your needs
