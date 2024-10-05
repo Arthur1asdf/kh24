@@ -8,7 +8,7 @@ const Signin = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        // Handle sign-in logic here
+        // Handle sign-in stuff here
         console.log("Email", email, "Password: ", password);
     };
 

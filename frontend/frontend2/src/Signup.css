@@ -37,6 +37,9 @@
 label {
     display: block;
     margin-bottom: 0.5rem;
+    text-align: left;
+    font-weight: 400;
+
 }
 
 input {
@@ -72,12 +75,12 @@ input {
 }
 
 .login-link, .terms {
-    text-align: center;
-    margin-top: 1rem;
+    text-align: left;
+    margin-top: 0.6rem;
 }
 
 .terms {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     color: #666;
 }
 
