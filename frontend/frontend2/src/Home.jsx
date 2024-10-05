@@ -4,12 +4,27 @@ import './Home.css';
 
 const Home = () => {
     return (
-        <div className="background1">
-            <h1>Home Page</h1>
-            <p>Welcome to the home page.</p>
-            <Link to="/signin">
-                <button>Go to Sign in</button>
-            </Link>
+        <div className="home-container">
+            <header className="header">
+                <nav className="navbar">
+                    <Link to="/" className="logo">OurLogo</Link>
+                    <div className="nav-links">
+                        <Link to="#" className="nav-link">Learn</Link>
+                        <Link to="#" className="nav-link">About</Link>
+                        <Link to="#" className="nav-link">Contact</Link>
+                    </div>
+                    <div className="auth-buttons">
+                        <Link to="/signin" className="btn btn-login">Login</Link>
+                        <Link to="/signup" className="btn btn-signup">Sign Up</Link>
+                    </div>
+                </nav>
+            </header>
+
+            <main className="main-content">
+                <h1>Welcome to Our Platform</h1>
+                <p>Discover amazing features and start your journey with us today.</p>
+                <Link to="/learn" className="btn btn-primary">Get Started</Link>
+            </main>
         </div>
     );
 };
