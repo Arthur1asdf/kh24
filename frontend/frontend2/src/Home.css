@@ -86,6 +86,7 @@ body {
 }
 
 .sample-dashboard-btn:hover {
+    text-decoration: none;
     background-color: #76c76f; /* Darker shade on hover */
 }
 .btn {
