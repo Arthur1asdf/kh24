@@ -1,137 +1,111 @@
 .dashboard-container {
     min-height: 100vh;
     background-color: #f0f8ff; /* Background color */
- }
- 
- 
- .dashboard-nav {
+}
+
+.dashboard-nav {
     background: linear-gradient(135deg, #D8BFD8 0%, #ADD8E6 100%); /* Purple gradient */
     color: white;
     padding: 1rem;
     display: flex;
     justify-content: space-between; /* Space between logo/title and logout button */
     align-items: center;
- }
- 
- 
- .logo-container {
+}
+
+.logo-container {
     display: flex;
     align-items: center; /* Align logo and title vertically */
- }
- 
- 
- .logo-image {
+}
+
+.logo-image {
     max-height: 40px; /* Adjust logo size */
     margin-right: 10px; /* Space between logo and title */
- }
- 
- 
- .banner-title {
+}
+
+.banner-title {
     font-size: 1.5rem; /* Smaller title size */
- }
- 
- 
- .logout-btn {
+}
+
+.logout-btn {
     background-color: transparent;
     color: white;
     border: 1px solid white;
     padding: 0.25rem 0.5rem; /* Smaller button size */
     cursor: pointer;
     transition: all 0.3s ease;
- }
- 
- 
- .logout-btn:hover {
+}
+
+.logout-btn:hover {
     background-color: white;
-    color: #004add; /* change hover color */
- }
- 
- 
- .dashboard-content {
+    color: #004add; /* Change text color on hover */
+}
+
+.dashboard-content {
     padding: 2rem;
     max-width: 1200px;
-    margin: 0 auto; /* centered */
- }
- 
- 
- .welcome-section {
+    margin: 0 auto; /* Center content */
+}
+
+.welcome-section {
     margin-bottom: 2rem;
- }
- 
- 
- /* centers dashboard grid */
- .dashboard-grid {
+}
+
+/* Centered dashboard grid */
+.dashboard-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.5rem;
     margin-bottom: 2rem;
- }
- 
- 
- /* dashboard cards */
- .dashboard-card {
+}
+
+/* Dashboard cards */
+.dashboard-card {
     background-color: white;
     border-radius: 8px;
     padding: 1.5rem;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     text-align: center;
- }
- 
- 
- .big-number {
+}
+
+.big-number {
     font-size: 2.5rem;
     font-weight: bold;
- }
- 
- 
- /* centers action buttons */
- .action-center {
+}
+
+/* Centered action buttons */
+.action-center {
     margin-bottom: 2rem;
- }
- 
- 
- .action-buttons {
+}
+
+.action-buttons {
     display: flex;
-    flex-wrap: wrap; /* allows wrappin on smaller screens */
-    justify-content: center; /* center buttons */
- }
- 
- 
- .action-btn {
-   background-color:#004add; /* button color */
-   color:white; /* text color */
-   border-radius:.25rem; /* rounded corners */
-   border:none; /* no border */
-   padding:.75rem 1.5rem; /* padding for buttons */
-   margin-right:.5rem; /* space btw buttons */
- }
- 
- 
- .action-btn:hover {
-   background-color:#003bbb; /* darker shade on hover */
- }
- 
- 
- /* insights section - styles */
- .insights-section ul {
-   list-style-type:none; /* remove bullet points */
-   padding-left:0; /* remove padding??? */
- }
- 
- 
- .insights-section li {
-   background-color:white; /* background for insights items*/
-   margin-bottom:.5rem; /* space between insights items*/
-   padding:.75rem; /* padding for insights items*/
-   border-radius:.25rem; /* rounded corners for insights items*/
-   box-shadow:.05em .05em .15em rgba(0,0,0,.1); /* a lil shadow for insights items*/
- 
- 
- }
- 
- 
- /* bold text is not working >:( */
- .bold-text {
-    font-weight: bold;
- }
- 
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: center; /* Center buttons */
+}
+
+.action-btn {
+   background-color:#004add; /* Button color */
+   color:white; /* Text color */
+   border-radius:.25rem; /* Rounded corners */
+   border:none; /* No border */
+   padding:.75rem 1.5rem; /* Padding for buttons */
+   margin-right:.5rem; /* Space between buttons */
+}
+
+.action-btn:hover {
+   background-color:#003bbb; /* Darker shade on hover */
+}
+
+/* Insights section styles */
+.insights-section ul {
+   list-style-type:none; /* Remove bullet points */
+   padding-left:0; /* Remove padding */
+}
+
+.insights-section li {
+   background-color:white; /* Background for insights items*/
+   margin-bottom:.5rem; /* Space between insights items*/
+   padding:.75rem; /* Padding for insights items*/
+   border-radius:.25rem; /* Rounded corners for insights items*/
+   box-shadow:.05em .05em .15em rgba(0,0,0,.1); /* Subtle shadow for insights items*/
+}
