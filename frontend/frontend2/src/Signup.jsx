@@ -40,7 +40,9 @@ const Signup = () => {
                             </button>
                         </div>
                     </div>
-                    <button type="submit" className="signup-button">Sign Up</button>
+                    <Link to="/signin">
+                        <button type="submit" className="signup-button">Sign Up</button>
+                    </Link>
                     
                     <p className="login-link" style={{ fontSize: 
                         '0.9rem', color: '#666' }}>
