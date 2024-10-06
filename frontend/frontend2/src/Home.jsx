@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Home.css';
-import logoImage from 'kh24/frontend/frontend2/src/assets/kh24_logo.png';
+import logoImage from './assets/kh24_logo.png';
 
 const Home = () => {
     const [name, setName] = useState(""); // State to hold the name from the API
