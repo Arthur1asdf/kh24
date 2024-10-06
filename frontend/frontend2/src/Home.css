@@ -62,6 +62,7 @@ body {
 }
 
 .nav-link:hover {
+    text-decoration: none;
     color: #007bff;
 }
 
@@ -97,7 +98,8 @@ body {
 }
 
 .btn:hover {
-    opacity: 0.9;
+    text-decoration: none;
+    opacity: 0.6;
 }
 
 /* Main Content */
@@ -183,6 +185,7 @@ p {
 }
 
 .solution-item:hover {
+    text-decoration: none;
     transform: translateY(-5px);
 }
 
