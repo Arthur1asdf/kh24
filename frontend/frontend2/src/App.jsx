@@ -5,6 +5,7 @@ import Signin from './Signin';
 import Signup from './Signup';
 import Plad from './Plad';
 import Dashboard from './Dash'; // hi import Dashboard component?
+import EnergyDashboard from './components/EnergyDashboard';
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
         <Route path="/plad" element={<Plad />} />
         <Route path="/dashboard" element={<Dashboard />} />
 
-        <Route path="/dashboard" element={<Dashboard />} /> 
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/energy-dashboard" element={<EnergyDashboard />} /> 
       </Routes>
     </Router>
   );
