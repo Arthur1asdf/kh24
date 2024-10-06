@@ -3,6 +3,13 @@ import { useNavigate } from 'react-router-dom';
 import './DashE.css';
 import logoImage from './assets/kh24_logo.png'; // Import your logo image
 
+const months = [
+    { id: 1, description: 'Orlando Utilities Payment', amount: '-$120.45'},
+    { id: 2, description: 'ChargePoint - EV Charging Session', amount: '-$179.92'},
+    { id: 3, description: 'Energy Efficieny Upgrade (LED Bulbs)', amount: '-$41.99'},
+    { id: 4, description: 'Water Usage Adjustment Credit', amount: '$10.35'},
+]
+
 const Dashboard = () => {
     const navigate = useNavigate();
 

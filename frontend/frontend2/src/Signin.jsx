@@ -42,9 +42,14 @@ const Signin = () => {
                             required
                         />
                     </div>
+<<<<<<< HEAD
 
 
                     <Link to="/plad"> <button type="submit" className="sign-in-button">Sign in</button> </Link>
+=======
+                    <button type="submit" className="sign-in-button">Sign In</button>
+                    
+>>>>>>> 5348fca (new dashs)
                 </form>
             </div>
         </div>

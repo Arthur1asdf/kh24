@@ -5,7 +5,7 @@ import Signin from './Signin';
 import Signup from './Signup';
 import Plad from './Plad';
 import Dashboard from './Dash'; // hi import Dashboard component?
-import EnergyDashboard from './components/EnergyDashboard';
+import EnergyDashboard from './DashE';
 
 function App() {
   return (

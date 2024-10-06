@@ -41,12 +41,13 @@ const Signup = () => {
                         </div>
                     </div>
                     <button type="submit" className="signup-button">Sign Up</button>
+                    
                     <p className="login-link" style={{ fontSize: 
                         '0.9rem', color: '#666' }}>
                             Already have an account? <Link to="/login">Log in</Link>
                     </p>
                     <p className="terms">
-                        By creating an account, you accept OurName's Terms of Service & Privacy Statement
+                        By creating an account, you accept EcoGuard's Terms of Service & Privacy Statement
                     </p>
                 </form>
             </div>
