@@ -1,12 +1,20 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-axios.defaults.baseURL = "http://localhost:8000"; // Ensure this matches the Express server's port
 import { usePlaidLink } from "react-plaid-link";
 import './Plad.css';
 import { Link } from 'react-router-dom';
 
+
+axios.defaults.baseURL = "http://localhost:8000"; // Ensure this matches the Express server's port
+
+function PlaidAuth({ publicToken }) {
+    return <span>{publicToken}</span>;
+}
+
 const Plad = () => {
     const [linkToken, setLinkToken] = useState();
+    const [publicToken, setPublicToken] = useState();
+
     useEffect(() => {
         async function fetchToken() {
             try {
@@ -21,13 +29,25 @@ const Plad = () => {
 
     const { open, ready } = usePlaidLink({
         token: linkToken,
-        onSuccess: (public_token, metadata) => {
-            console.log("success", public_token, metadata)
-            // send public_token to server
+        onSuccess: async (public_token, metadata) => {
+            setPublicToken(public_token);
+            console.log("success", public_token, metadata);
+
+            try {
+                // Exchange public_token for access_token
+                const exchangeResponse = await axios.post('/exchange_public_token', { public_token });
+                const accessToken = exchangeResponse.data.access_token;
+
+                // Fetch transactions using the access_token
+                const transactionsResponse = await axios.post('/fetch_transactions', { access_token: accessToken });
+                console.log(transactionsResponse.data.message);
+            } catch (error) {
+                console.error("Error fetching transactions", error);
+            }
         },
     });
 
-    return (
+    return publicToken ? (<PlaidAuth publicToken={publicToken} />) : (
 
         <div className="backgroundDiv">
             <div className="po">
