@@ -40,7 +40,7 @@ const Home = () => {
             </header>
 
             <main className="main-content">
-                <h1>Welcome to *EcoGuard*</h1>
+                <h1>Welcome to EcoGuard</h1>
                 <p>Revolutionizing home energy efficiency and financial security.</p>
                 {name && <p>Hello, {name}! Ready to optimize your energy and secure your finances?</p>}
                 <Link to="/dashboard" className="sample-dashboard-btn">View Sample Dashboard</Link>
