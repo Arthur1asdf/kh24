@@ -43,7 +43,7 @@ const Home = () => {
                 <h1>Welcome to EcoGuard Finance</h1>
                 <p>Revolutionizing home energy efficiency and financial security.</p>
                 {name && <p>Hello, {name}! Ready to optimize your energy and secure your finances?</p>}
-                
+
                 <section className="solution-section">
                     <h2>Our Innovative Solution</h2>
                     <div className="solution-grid">
