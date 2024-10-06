@@ -85,8 +85,8 @@ body {
 }
 
 .btn-signup {
-    background-color: #D1FFBD;
-    color: #333;
+    background-color: #004add;
+    color: #f0f0f0;
 }
 
 .btn-primary {
@@ -145,4 +145,44 @@ p {
     h1 {
         font-size: 2rem;
     }
+/* Solution Responsive blah blah */
+@media (max-width: 768px) {
+    /* ... existing styles ... */
+
+    .solution-grid {
+        grid-template-columns: 1fr;
+    }
 }
+
+}
+
+/* Soultion Section!!! */
+
+.solution-section {
+    padding: 60px 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    margin: 40px auto;
+    max-width: 1200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.solution-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three items per row */
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.solution-item {
+    background-color: #f0f8ff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.solution-item:hover {
+    transform: translateY(-5px);
+}
+
