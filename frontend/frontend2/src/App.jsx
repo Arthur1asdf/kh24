@@ -6,7 +6,7 @@ import Signup from './Signup';
 import Plad from './Plad';
 import Dashboard from'./Dash';
 
-const App = () => {
+function App() {
   return (
     <Router>
       <Routes>
@@ -14,11 +14,11 @@ const App = () => {
         <Route path="/signin" element={<Signin />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/plad" element={<Plad />} />
-        <Route path="/dashboard" element={<Plad />} />
+        <Route path="/dashboard" element={<Dashboard />} />
 
       </Routes>
     </Router>
   );
-};
+}
 
 export default App;
