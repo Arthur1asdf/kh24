@@ -18,7 +18,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
 
         <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/energy-dashboard" element={<EnergyDashboard />} /> 
+        <Route path="/energy-dashboard" element={<EnergyDashboard />} />
       </Routes>
     </Router>
   );

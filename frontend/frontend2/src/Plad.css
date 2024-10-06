@@ -2,8 +2,23 @@
     padding : 30px;
     font-size: large;
     color: white;
-    background-color: black;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-color: rgb(49, 47, 47);
+    width: 420px;
+    margin-bottom: 18px;
+
+}
+.backgroundDiv{
+    display: flex;
+    width: auto;
+    height: 100vh;
+    background-color: whitesmoke;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+
+}
+.po{
+    display: flex;
+    
 }

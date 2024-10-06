@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 axios.defaults.baseURL = "http://localhost:8000"; // Ensure this matches the Express server's port
 import { usePlaidLink } from "react-plaid-link";
 import './Plad.css';
+import { Link } from 'react-router-dom';
 
 const Plad = () => {
     const [linkToken, setLinkToken] = useState();
@@ -27,9 +28,24 @@ const Plad = () => {
     });
 
     return (
-        <button className="bankButton" onClick={() => open()} disabled={!ready}>
-            Connect a bank account
-        </button>
+
+        <div className="backgroundDiv">
+            <div className="po">
+                <button className="bankButton" onClick={() => open()} disabled={!ready}>
+                    Connect a bank account
+                </button>
+            </div>
+            <div className="po">
+                <Link to="/dashboard"><button className="bankButton">
+                    Continue
+                </button></Link>
+            </div>
+            <div className="po">
+                <Link to="/signin"><button className="bankButton">
+                    Back
+                </button></Link>
+            </div>
+        </div>
     );
 
 };

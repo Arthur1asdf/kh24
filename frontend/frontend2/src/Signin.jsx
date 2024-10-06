@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './Signin.css'; // Assuming you have a CSS file for styling
 import './App.css';
 import videoBg from './assets/bg_geometric.mp4';
+import { Link } from 'react-router-dom';
 
 const Signin = () => {
     const [email, setEmail] = useState('');
@@ -41,7 +42,9 @@ const Signin = () => {
                             required
                         />
                     </div>
-                    <button type="submit" className="sign-in-button">Sign In</button>
+
+
+                    <Link to="/plad"> <button type="submit" className="sign-in-button">Sign in</button> </Link>
                 </form>
             </div>
         </div>
