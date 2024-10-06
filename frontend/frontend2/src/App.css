@@ -1,8 +1,8 @@
 #root {
-  width: 100%; /* Allow full width */
-  height: 100vh; /* Ensure it takes full height */
-  margin: 0; /* Remove margin to avoid extra space */
-  padding: 0; /* Remove padding to avoid restricting background */
+  width: 100%; /* allows full width */
+  height: 100vh; /* full height */
+  margin: 0; /* remove margin to avoid extra space */
+  padding: 0; /* remove padding to avoid restricting background */
 }
 
 .logo {

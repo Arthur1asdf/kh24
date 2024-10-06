@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Home.css';
-import logoImage from './assets/kh24_logo.png';
+import logoImage from './assets/kh24_logo.png'; // Import your logo image
 
 const Home = () => {
     const [name, setName] = useState("");
@@ -48,7 +48,7 @@ const Home = () => {
                     <h2>Our Innovative Solution</h2>
                     <div className="solution-grid">
                         <div className="solution-item">
-                            {/* <div className="image-placeholder">Image: Smart Home</div> */}
+                            {/* Placeholder for image */}
                             <div className="solution-icon">🏠</div>
                             <h3 className="solution-title">Decarbonized Homes</h3>
                             <p className="solution-description">
@@ -56,7 +56,7 @@ const Home = () => {
                             </p>
                         </div>
                         <div className="solution-item">
-                            {/* <div className="image-placeholder">Image: Data Analytics</div> */}
+                            {/* Placeholder for image */}
                             <div className="solution-icon">📊</div>
                             <h3 className="solution-title">Energy Efficiency</h3>
                             <p className="solution-description">
@@ -64,7 +64,7 @@ const Home = () => {
                             </p>
                         </div>
                         <div className="solution-item">
-                            {/* <div className="image-placeholder"> Image: Secure Transactions </div> */}
+                            {/* Placeholder for image */}
                             <div className="solution-icon">🛡️</div>
                             <h3 className="solution-title">Fraud Detection</h3>
                             <p className="solution-description">
@@ -73,9 +73,58 @@ const Home = () => {
                         </div>
                     </div>
                 </section>
-            </main>
-        </div>
+
+                {/* Dashboard Grid */}
+                <div className="dashboard-grid">
+                    {/* Dashboard cards */}
+                    <div className="dashboard-card energy-savings">
+                        <h3>Energy Savings</h3>
+                        <p className="big-number">15%</p>
+                        <p>Reduction in energy consumption this month</p>
+                    </div>
+                    <div className="dashboard-card carbon-footprint">
+                        <h3>Carbon Footprint</h3>
+                        <p className="big-number">2.5 tons</p>
+                        <p>Your estimated annual CO2 emissions</p>
+                    </div>
+                    <div className="dashboard-card fraud-protection">
+                        <h3>Fraud Protection</h3>
+                        <p className="big-number">100%</p>
+                        <p>Of your transactions protected</p>
+                    </div>
+                    <div className="dashboard-card eco-score">
+                        <h3>Eco-Finance Score</h3>
+                        <p className="big-number">85/100</p>
+                        <p>Great job! You're on track for sustainable finances</p>
+                    </div>
+                </div>
+
+                {/* Centers Action Buttons */}
+                <section className="action-center">
+                    <h2>Take Action</h2>
+                    <div className="action-buttons">
+                        <button className="action-btn">Optimize Energy Use</button>
+                        <button className="action-btn">Review Transactions</button>
+                        <button className="action-btn">Set Eco-Goals</button>
+                        <button className="action-btn">Financial Health Check</button>
+                    </div>
+                </section>
+
+                {/* Insights Section */}
+                <section className="insights-section">
+                    <h2>Your Eco-Financial Insights</h2>
+                    <ul>
+                        {/* Example insights */}
+                        <li>Your solar panels saved you $50 this month!</li>
+                        <li>Tip: Upgrading to LED bulbs could reduce your energy bill by 10%</li>
+                        <li>Alert: Unusual transaction detected. Click to review.</li>
+                        <li>You're in the top 10% of eco-friendly users in your area!</li>
+                    </ul>
+                </section>
+
+            </main> {/* Closing main tag */}
+        </div> 
     );
 };
 
-export default Home;
+export default Home; // Ensure you export the Home component correctly

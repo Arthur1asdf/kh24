@@ -4,7 +4,7 @@ import Home from './Home';
 import Signin from './Signin';
 import Signup from './Signup';
 import Plad from './Plad';
-import Dashboard from'./Dash';
+import Dashboard from './Dash'; // hi import Dashboard component?
 
 function App() {
   return (
@@ -16,6 +16,7 @@ function App() {
         <Route path="/plad" element={<Plad />} />
         <Route path="/dashboard" element={<Dashboard />} />
 
+        <Route path="/dashboard" element={<Dashboard />} /> 
       </Routes>
     </Router>
   );

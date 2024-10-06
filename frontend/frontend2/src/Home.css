@@ -15,7 +15,7 @@ body {
 .home-container {
     min-height: 100vh;
     background: linear-gradient(135deg, #D8BFD8 0%, #ADD8E6 100%);
-    padding-top: 60px; /* Add padding to account for fixed header */
+    padding-top: 60px; /* add padding to account for fixed header!!! */
 }
 
 
@@ -27,7 +27,7 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    height: 60px; /* Set a fixed height for the header */
+    height: 60px; /* set fixed height for the header!!! */
     display: flex;
     align-items: center;
 }
@@ -43,9 +43,9 @@ body {
 }
 
 .logo-image {
-    max-height: 55px; /* Adjust the height as needed */
-    width: auto; /* Maintain aspect ratio */
-    margin-right: 10px; /* Add some space between logo and other navbar items */
+    max-height: 55px; /* adjust height as needed!!!! */
+    width: auto; 
+    margin-right: 10px; /* some space btw logo and other navbar items */
     object-fit:contain;
 }
 
@@ -187,7 +187,7 @@ p {
 
 .solution-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Three items per row */
+    grid-template-columns: repeat(3, 1fr); /* ONLY 3 items per row can change tho */
     gap: 30px;
     margin-top: 40px;
 }

@@ -17,7 +17,7 @@ const Dashboard = () => {
             <nav className="dashboard-nav">
                 <div className="logo-container">
                     <img src={logoImage} alt="EcoGuard Logo" className="logo-image" />
-                    <h1 className="banner-title">EcoGuard</h1>
+                    <h1 className="banner-title">EcoGuard Financial Dashboard</h1>
                 </div>
                 <button onClick={handleLogout} className="logout-btn">Log Out</button>
             </nav>
