@@ -7,9 +7,9 @@ const Dashboard = () => {
     const navigate = useNavigate();
 
     const handleLogout = () => {
-        // Clear token (if applicable)
-        localStorage.removeItem('authToken');        
-        navigate('/'); // Redirect to home page after logout
+        // Clear user authentication data (if applicable)
+        localStorage.removeItem('authToken'); // Example: remove token from local storage
+        navigate('/'); // Go to home page after logout
     };
 
     return (
@@ -63,19 +63,18 @@ const Dashboard = () => {
                     </div>
                 </section>
 
-                {/* Insights Section */}
+                {/* Insights Section with Chronological Loading */}
                 <section className="insights-section">
                     <h2>Your Eco-Financial Insights</h2>
                     <ul>
                         {/* Example insights */}
-                        <li>Your solar panels saved you $50 this month!</li>
-                        <li>Tip: Upgrading to LED bulbs could reduce your energy bill by 10%</li>
-                        <li>Alert: Unusual transaction detected. Click to review.</li>
-                        <li>You're in the top 10% of eco-friendly users in your area!</li>
+                        <li>Your solar panels <strong>saved</strong> you $50 this month!</li>
+                        <li><strong>Tip:</strong> Upgrading to LED bulbs could <strong>reduce</strong> your energy bill by <strong>10%</strong></li>
+                        <li><strong>Alert:</strong> Unusual transaction detected. Click to review.</li>
+                        <li>You're in the <strong>top 10%</strong> of eco-friendly users in your area!</li>
                     </ul>
                 </section>
-
-            </main> {/* Close the main content section here */}
+            </main>
         </div>
     );
 };
