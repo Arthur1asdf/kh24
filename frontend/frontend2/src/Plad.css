@@ -1,0 +1,9 @@
+.bankButton{
+    padding : 30px;
+    font-size: large;
+    color: white;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}

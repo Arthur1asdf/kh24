@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Signin.css'; // Assuming you have a CSS file for styling
 import './App.css';
+import videoBg from './assets/bg_geometric.mp4';
 
 const Signin = () => {
     const [email, setEmail] = useState('');
@@ -14,7 +15,9 @@ const Signin = () => {
 
     return (
         <div>
-            <div className="stars"></div> {/* Add stars overlay */}
+            <div className='sign-in'>
+                <video src={videoBg} autoPlay loop muted />
+            </div>
             <div className="sign-in-container">
                 <h2>Log In</h2>
                 <form onSubmit={handleSubmit} className="sign-in-form">
