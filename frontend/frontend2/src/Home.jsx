@@ -30,7 +30,7 @@ const Home = () => {
                     <div className="nav-links">
                         <Link to="/learn" className="nav-link">Learn</Link>
                         <Link to="/about" className="nav-link">About</Link>
-                        <Link to="/contact" className="nav-link">Contact</Link>
+                        <Link to="/plad" className="nav-link">Contact</Link>
                     </div>
                     <div className="auth-buttons">
                         <Link to="/signin" className="btn btn-login">Login</Link>

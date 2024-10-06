@@ -1,19 +1,36 @@
-import axios from "axios"
-import { useEffect, useState } from "react"
-axios.defaults.baseURL = "https://localhost:8000"
+import axios from "axios";
+import { useEffect, useState } from "react";
+axios.defaults.baseURL = "http://localhost:8000"; // Ensure this matches the Express server's port
+import { usePlaidLink } from "react-plaid-link";
 
-
-const Plaid = () => {
+const Plad = () => {
+    const [linkToken, setLinkToken] = useState();
     useEffect(() => {
-        async function fetch() {
-            const response = axios.post("/hello", { name: "vlad" });
-            console.log("response", response.data);
+        async function fetchToken() {
+            try {
+                const response = await axios.post("/create_link_token");
+                setLinkToken(response.data.link_token);
+            } catch (error) {
+                console.error("Error fetching link token", error);
+            }
         }
-        fetch()
+        fetchToken();
     }, []);
-    return (
-        <span>Hello World!</span>
-    )
 
-}
-export default Plaid;  
+    const { open, ready } = usePlaidLink({
+        token: linkToken,
+        onSuccess: (public_token, metadata) => {
+            console.log("success", public_token, metadata)
+            // send public_token to server
+        },
+    });
+
+    return (
+        <button onClick={() => open()} disabled={!ready}>
+            Connect a bank account
+        </button>
+    );
+
+};
+
+export default Plad;
