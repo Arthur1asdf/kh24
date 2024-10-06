@@ -1,5 +1,17 @@
 const express = require("express");
+const bodyParser = require("body-parser");
+
 
 const app = express();
 
-app 
+app.use(cors());
+app.use(bodyParser.json())
+
+
+app.get("/hello", (request , response ) => {
+    response.json({message: "hello world"});
+});
+
+app.listen(8000, () => {
+    console.log("server has started");
+});
