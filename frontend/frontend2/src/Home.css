@@ -41,11 +41,11 @@ body {
     padding: 0 20px;
 }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #333;
-    text-decoration: none;
+.logo-image {
+    max-height: 55px; /* Adjust the height as needed */
+    width: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Add some space between logo and other navbar items */
+    object-fit:contain;
 }
 
 .nav-links {

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Home.css';
+import logoImage from '/Users/Christo/Documents/GitHub/KnightHacks-2024/kh24/frontend/frontend2/src/assets/kh24_logo.png';
 
 const Home = () => {
     const [name, setName] = useState(""); // State to hold the name from the API
@@ -24,7 +25,9 @@ const Home = () => {
         <div className="home-container">
             <header className="header">
                 <nav className="navbar">
-                    <Link to="/" className="logo">OurLogo</Link>
+                    <Link to="/" className="logo"><img src={logoImage}
+                    alt="OurLogo" className="logo-image" />
+                    </Link>
                     <div className="nav-links">
                         <Link to="/learn" className="nav-link">Learn</Link>
                         <Link to="/about" className="nav-link">About</Link>
